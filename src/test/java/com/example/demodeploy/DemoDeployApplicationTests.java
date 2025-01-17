@@ -8,7 +8,8 @@ class DemoDeployApplicationTests {
 
     @Test
     void contextLoads() {
-        System.out.println("Unit test called! echo");
+        int a = 1 / 0;
+        throw new RuntimeException(("Error occurred!"));
     }
 
 }
