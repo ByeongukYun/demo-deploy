@@ -29,3 +29,12 @@ jobs:
         run: |
           mv ./build/libs/*SNAPSHOT.jar ./run.jar
           ls
+
+      - name: upload jar on EC2
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          source: "run.jar"
+          target: /home/ubuntu/server/demo
