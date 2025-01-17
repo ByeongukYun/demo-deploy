@@ -8,6 +8,7 @@ class DemoDeployApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("Unit test called! echo");
     }
 
 }

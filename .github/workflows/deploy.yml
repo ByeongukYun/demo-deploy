@@ -24,3 +24,8 @@ jobs:
           pwd
           ls
           ls ./build/libs
+
+      - name: build file rename
+        run: |
+          mv ./build/libs/*SNAPSHOT.jar ./run.jar
+          ls
