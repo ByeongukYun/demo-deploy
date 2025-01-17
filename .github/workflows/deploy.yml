@@ -16,3 +16,7 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "17"
+
+      - name: unit test and build
+        run:
+          ./gradlew clean build
