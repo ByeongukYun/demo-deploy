@@ -8,8 +8,6 @@ class DemoDeployApplicationTests {
 
     @Test
     void contextLoads() {
-        int a = 1 / 0;
-        throw new RuntimeException(("Error occurred!"));
     }
 
 }

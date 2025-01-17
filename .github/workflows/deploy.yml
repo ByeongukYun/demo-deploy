@@ -17,6 +17,12 @@ jobs:
           distribution: "temurin"
           java-version: "17"
 
+
+      - name: application.properties create dynamically
+        run: |
+          echo "${{ secrets.APPLICATION_PROPERTIES }}" > ./src/main/resources/application.properties
+          ls ./src/main/resources
+
       - name: unit test and build
         run: |
           chmod +x ./gradlew
